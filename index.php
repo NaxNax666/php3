@@ -2,7 +2,7 @@
 require __DIR__ . '/authcore/auth.php';
 $login = getUserLogin();
 if ($login === null):
-    header('Location: /kursach/authcore/login.php');
+    header('Location: authcore/login.php');
 else:
-    header('Location: /kursach/main.php');
+    header('Location: main.php');
 endif; ?>

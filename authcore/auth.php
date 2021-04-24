@@ -1,5 +1,5 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT']."/kursach/dbScript/dbconfig.php";
+include "../dbScript/dbconfig.php";
 function checkAuth($login, $password)
 {
     if(abs(strcmp($login,''))==0||abs(strcmp($password,''))==0){

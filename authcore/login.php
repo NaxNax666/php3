@@ -9,7 +9,7 @@ if (isset($_POST['signin'])) {
     if (checkAuth($login, $password)) {
         setcookie('login', $login, 0, '/');
         setcookie('password', $password, 0, '/');
-        header('Location: /kursach/index.php');
+        header('Location: ../index.php');
     } else {
         $error = 'Ошибка авторизации';
     }
