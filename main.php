@@ -1,6 +1,6 @@
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="ISO-8859-1">
     <?php
     //require __DIR__ . '/authcore/auth.php';
     //$login = getUserLogin();
