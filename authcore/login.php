@@ -38,7 +38,7 @@ if (isset($_COOKIE['password'])) {
     $password = '';
 }
 if (checkAuth($login, $password)) {
-    header('Location: /kursach/main.php');
+    header('Location: ../main.php');
 }
 ?>
 <html>
