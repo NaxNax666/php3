@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/auth.php';
+include $_SERVER['DOCUMENT_ROOT']."/authcore/auth.php";;
 if (isset($_POST['signin'])) {
 
 
