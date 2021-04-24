@@ -2,20 +2,21 @@
 <head>
 <meta charset="utf-8">
     <?php
-    require __DIR__ . '/authcore/auth.php';
-    $login = getUserLogin();
-    if ($login === null){
-        header('Location: authcore/login.php');
-    }
+    //require __DIR__ . '/authcore/auth.php';
+    //$login = getUserLogin();
+    //if ($login === null){
+        //header('Location: authcore/login.php');
+    //}
     ?>
     <script src="ckeditor4/ckeditor.js"></script>
     <script type="text/javascript" src="jsScript/openEditor.js"></script>
     <link href="css/mystyle.css" rel="stylesheet">
 
     <?php
-
+    $login='admin';
     if (!isset($_GET['page']))
     {
+
     $_GET['page']=1;
     }
     include("dbScript/db.php");
