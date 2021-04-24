@@ -1,0 +1,231 @@
+
+
+table{
+    position: relative;
+    transform: translate(10%,0);
+    border:5px;
+    width:80%;
+    background:#efeeee;
+
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+}
+TD, TH {
+    position: relative;
+    padding: 3px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid black; /* Параметры рамки */
+
+}
+
+.neomorphism-edit{
+
+    font-size: 10px;
+    font-family: Comic Sans MS;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 15px;
+    border-radius: 5px;
+    background-color: #f0f0f3;
+    box-shadow: 2px 2px 4px #d3d3d6,
+                -2px -2px 4px #fff;
+}
+
+
+.neomorphism-auth{
+    font-family: "Courier New";
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    width: 600px;
+    background-color: rgba(240, 240, 243, 0.5);
+    box-shadow: 10px 10px 21px #d3d3d6,
+    -10px -10px 21px #fff;
+
+}
+
+input[type="submit" i] {
+    font-family: "Courier New";
+    font-size: 25px;
+    text-align: center;
+    border-radius: 10px;
+    opacity: 90%;
+}
+input[type=text] {
+    padding:5px;
+    border:2px solid #ccc;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=text]:focus {
+    border-color:#333;
+}
+
+input[type=password] {
+    padding:5px;
+    border:2px solid #ccc;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=password]:focus {
+    border-color:#333;
+}
+
+.neomorphism-exit{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-family: Comic Sans MS;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #f0f0f3;
+    box-shadow: 4px 4px 5px #d3d3d6,
+    -4px -4px 8px #fff;
+}
+
+
+
+.neomorphism-add{
+     position: absolute;
+     bottom: 50px;
+     right: 15px;
+     font-size: 10px;
+     font-family: Comic Sans MS;
+     width: 100px;
+     height: 30px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     border-radius: 10px;
+     background-color: #f0f0f3;
+     box-shadow: 4px 4px 5px #d3d3d6,
+     -4px -4px 8px #fff;
+ }
+
+
+
+.neomorphism-del{
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 10px;
+    font-family: Comic Sans MS;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #f0f0f3;
+    box-shadow: 4px 4px 5px #d3d3d6,
+    -4px -4px 8px #fff;
+}
+
+.neomorphism-article{
+    position: relative;
+    right: -10px;
+    font-size: 15px;
+    font-family: Comic Sans MS;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 95%;
+    height: 75px;
+    border-radius: 10px;
+    background-color: #f0f0f3;
+    box-shadow: 4px 4px 5px #d3d3d6,
+    -4px -4px 8px #fff;
+}
+.hed{
+    position: absolute;
+    top: 5px;
+    transform: translate(40%,0);
+    font-family: Comic Sans MS;
+    font-size: 50px;
+    text-align: center;
+    vertical-align: middle;
+    width: 60%;
+
+}
+
+.hedlow{
+
+    font-family: Arial;
+    font-size: 30px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 600;
+
+
+}
+.podhed{
+
+    font-family: Arial;
+    font-size: 20px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 600;
+
+
+}
+
+.maintext{
+
+    font-family: Arial;
+    font-size: 14px;
+    text-align: left;
+}
+
+.code{
+    background-color: #999999;
+    font-family: Courier New;
+    font-size: 14px;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+}
+
+a:link {
+    color: #000000;
+}
+
+a:visited {
+    color: #111111;
+}
+
+a:focus {
+
+    background: #f0f0f3;
+    text-decoration: underline;
+}
+
+a:hover {
+
+    background: #f0f0f3;
+    text-decoration: underline;
+}
+
+a:active {
+
+}
