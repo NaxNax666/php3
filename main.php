@@ -2,18 +2,18 @@
 <head>
 <meta charset="ISO-8859-1">
     <?php
-    //require __DIR__ . '/authcore/auth.php';
-    //$login = getUserLogin();
-    //if ($login === null){
-        //header('Location: authcore/login.php');
-    //}
+    require __DIR__ . '/authcore/auth.php';
+    $login = getUserLogin();
+    if ($login === null){
+        header('Location: authcore/login.php');
+    }
     ?>
     <script src="ckeditor4/ckeditor.js"></script>
     <script type="text/javascript" src="jsScript/openEditor.js"></script>
     <link href="css/mystyle.css" rel="stylesheet">
 
     <?php
-    $login='admin';
+    //$login='admin';
     if (!isset($_GET['page']))
     {
 
@@ -30,7 +30,7 @@
             <a href="main.php"><img src="CSS3_logo.png" height="100%" align="left"></a>
             <img src="html5.png" height="100%" align="left">
             <div class = "hed" >Информационный портал<br> "Немного о разметке"</div>
-            <div class = "neomorphism-exit"><a href="/kursach/authcore/logout.php">Выйти</a></div>
+            <div class = "neomorphism-exit"><a href="authcore/logout.php">Выйти</a></div>
             <?php
             if(strcmp($login, 'admin') == 0 ){
             echo'<div class = "neomorphism-add"><a href="dbScript/DelAdd.php?page='.$_GET['page'].'&mode=0">Добавить статью</a></div>
