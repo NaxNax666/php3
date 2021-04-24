@@ -13,7 +13,7 @@
     <link href="css/mystyle.css" rel="stylesheet">
 
     <?php
-    $login='admin';
+    $login='user';
     if (!isset($_GET['page']))
     {
 
