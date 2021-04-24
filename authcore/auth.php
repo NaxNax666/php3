@@ -30,12 +30,17 @@ function getUserLogin()
 }
 
 function signup($login,$password){
-    global $db_name,$db_adress,$db_password,$db_login;
-    $mysqli = new mysqli($db_adress, $db_login, $db_password, $db_name);
-    $password = password_hash($password,PASSWORD_DEFAULT);
-    $query  = "INSERT INTO users (username,parol) VALUES ('".$login."','".$password."');";
-    $mysqli->query($query);
-    $mysqli->close();
+    if(abs(strcmp($login,''))==0||abs(strcmp($password,''))==0){
+        echo 'Ошибка';
+    }
+    else {
+        global $db_name, $db_adress, $db_password, $db_login;
+        $mysqli = new mysqli($db_adress, $db_login, $db_password, $db_name);
+        $password = password_hash($password, PASSWORD_DEFAULT);
+        $query = "INSERT INTO users (username,parol) VALUES ('" . $login . "','" . $password . "');";
+        $mysqli->query($query);
+        $mysqli->close();
+    }
 
 }
 
