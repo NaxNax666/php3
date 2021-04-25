@@ -1,15 +1,5 @@
 {
-  "name": "vendor_name/kursach",
-  "description": "description",
-  "minimum-stability": "stable",
-  "license": "proprietary",
-  "authors": [
-    {
-      "name": "NaxNax",
-      "email": "email@example.com"
+    "require": {
+        "ext-gd": "^8.0"
     }
-  ],
-  "require": {
-    "ext-gd": "*"
-  }
 }
