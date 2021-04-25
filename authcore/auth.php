@@ -1,6 +1,6 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT']."/dbScript/dbconfig.php";
-function checkAuth($login, $password)
+function checkAuth($login, $password)//функция проверки авторизации
 {
     if(abs(strcmp($login,''))==0||abs(strcmp($password,''))==0){
         return false;
@@ -17,19 +17,8 @@ function checkAuth($login, $password)
     }
     return false;
 }
-function getUserLogin()
+function signup($login,$password)//функция регистрации
 {
-    $loginFromCookie = isset($_COOKIE['login']) ? $_COOKIE['login']: '';
-    $passwordFromCookie = isset($_COOKIE['password']) ? $_COOKIE['password']: '';
-
-    if (checkAuth($loginFromCookie, $passwordFromCookie)) {
-        return $loginFromCookie;
-    }
-
-    return null;
-}
-
-function signup($login,$password){
     if(abs(strcmp($login,''))==0||abs(strcmp($password,''))==0){
         echo 'Ошибка';
     }
@@ -43,6 +32,16 @@ function signup($login,$password){
     }
 
 }
+function getUserLogin()
+{
+    $loginFromCookie = isset($_COOKIE['login']) ? $_COOKIE['login']: '';
+    $passwordFromCookie = isset($_COOKIE['password']) ? $_COOKIE['password']: '';
 
+    if (checkAuth($loginFromCookie, $passwordFromCookie)) {
+        return $loginFromCookie;
+    }
+
+    return null;
+}
 
 

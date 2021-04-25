@@ -1,7 +1,8 @@
 <?php
     include("dbconfig.php");
 
-    function db_edit($editor, $page){
+    function db_edit($editor, $page)//функция изменения статьи
+    {
         global $db_name,$db_adress,$db_password,$db_login;
         echo "<script>alert();</script>";
         $mysqli = new mysqli($db_adress, $db_login, $db_password, $db_name);
@@ -10,7 +11,8 @@
         $mysqli->close();
         //header("Location: main.php");
     }
-    function db_readText($page){
+    function db_readText($page)//функция получения содержания статьи
+    {
         global $db_name,$db_adress,$db_password,$db_login;
         $mysqli = new mysqli($db_adress, $db_login, $db_password, $db_name);
         $query  = "Select * from content where id =".$page.";";
@@ -22,7 +24,8 @@
 
 
     }
-    function db_readHeader($page){
+    function db_readHeader($page)//функция получения заголовка статьи
+    {
         global $db_name,$db_adress,$db_password,$db_login;
         $mysqli = new mysqli($db_adress, $db_login, $db_password, $db_name);
         $query  = "Select * from content where id =".$page.";";
@@ -32,7 +35,8 @@
         }
         $mysqli->close();
     }
-    function createMenu(){
+    function createMenu()//функция получения меню сайта
+    {
         global $db_name,$db_adress,$db_password,$db_login;
         $mysqli = new mysqli($db_adress, $db_login, $db_password, $db_name);
         $query  = "Select * from content;";
@@ -46,8 +50,8 @@
         //echo '';
         $mysqli->close();
     }
-
-    function delArticle($page){
+    function delArticle($page)//функция удаления статьи
+    {
         global $db_name,$db_adress,$db_password,$db_login;
         echo "<script>alert();</script>";
         $mysqli = new mysqli($db_adress, $db_login, $db_password, $db_name);
@@ -56,11 +60,11 @@
         $mysqli->close();
         header("location: ../main.php");
     }
-
-    function createArticle($title){
+    function createArticle($title)//функция добавления статьи
+    {
         global $db_name,$db_adress,$db_password,$db_login;
         $mysqli = new mysqli($db_adress, $db_login, $db_password, $db_name);
-        $query  = "INSERT INTO content (id, title, filename, text) VALUES (NULL, '".$title."', '', '');";
+        $query  = "INSERT INTO content (id, title, text) VALUES (NULL, '".$title."', '');";
         $mysqli->query($query);
         $query  = "select * from content where title='".$title."';";
         $res=$mysqli->query($query);
@@ -68,5 +72,4 @@
         $mysqli->close();
         header("Location: ../main.php?page=".$data['id']);
     }
-
 ?>

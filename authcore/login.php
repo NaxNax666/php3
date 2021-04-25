@@ -21,9 +21,6 @@ if (isset($_POST['add'])) {
     signup($login,$password);
     //header('Location: ../authcore/login.php');
 }
-
-
-
 if (isset($_COOKIE['login'])) {
 
     $login = $_COOKIE['login'];
@@ -48,25 +45,20 @@ if (checkAuth($login, $password)) {
     <link href="../css/mystyle.css" rel="stylesheet">
 </head>
 <body background="../bg.jpg">
-
-<form action="login.php" method="post">
-    <div class="neomorphism-auth">
-        <div>Имя пользователя:</div>
-        <div><input type="text" name="login" id="login"></div>
-        <div> Пароль:</div>
-        <div><input type="password" name="password" id="password"></div>
-        <div><input type="submit" value="Войти" name="signin"></div>
-        <div><input type = "submit" value = "Зарегистрироваться" name = "add"></div>
-        <?php if (isset($error)): ?>
-            <span style="color: #ff0000;">
-    <?= $error ?>
-</span>
-        <?php endif; ?>
-    </div>
-
-
-
-
-</form>
+    <form action="login.php" method="post">
+        <div class="neomorphism-auth">
+            <div>Имя пользователя:</div>
+            <div><input type="text" name="login" id="login"></div>
+            <div> Пароль:</div>
+            <div><input type="password" name="password" id="password"></div>
+            <div><input type="submit" value="Войти" name="signin"></div>
+            <div><input type = "submit" value = "Зарегистрироваться" name = "add"></div>
+            <?php if (isset($error)): ?>
+                <span style="color: #ff0000;">
+                    <?= $error ?>
+                </span>
+            <?php endif; ?>
+        </div>
+    </form>
 </body>
 </html>
