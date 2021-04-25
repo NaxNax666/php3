@@ -48,11 +48,7 @@ if (checkAuth($login, $password)) {
     <link href="../css/mystyle.css" rel="stylesheet">
 </head>
 <body background="../bg.jpg">
-<?php if (isset($error)): ?>
-    <span style="color: #ff0000;">
-    <?= $error ?>
-</span>
-<?php endif; ?>
+
 <form action="login.php" method="post">
     <div class="neomorphism-auth">
         <div>Имя пользователя:</div>
@@ -61,6 +57,11 @@ if (checkAuth($login, $password)) {
         <div><input type="password" name="password" id="password"></div>
         <div><input type="submit" value="Войти" name="signin"></div>
         <div><input type = "submit" value = "Зарегистрироваться" name = "add"></div>
+        <?php if (isset($error)): ?>
+            <span style="color: #ff0000;">
+    <?= $error ?>
+</span>
+        <?php endif; ?>
     </div>
 
 
