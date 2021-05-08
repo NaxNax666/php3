@@ -1,5 +1,5 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT']."/dbScript/dbconfig.php";
+include __DIR__ ."/../dbScript/dbconfig.php";
 function checkAuth($login, $password)//функция проверки авторизации
 {
     if(abs(strcmp($login,''))==0||abs(strcmp($password,''))==0){
