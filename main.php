@@ -9,6 +9,7 @@
     }
     ?>
     <script src="ckeditor4/ckeditor.js"></script>
+    <script src="ckfinder/ckfinder.js"></script>
     <script type="text/javascript" src="jsScript/openEditor.js"></script>
     <link href="css/mystyle.css" rel="stylesheet">
 

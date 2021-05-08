@@ -21,11 +21,11 @@ function generate(){
     element2.remove();
 
     CKEDITOR.replace('editor1',{
-        filebrowserBrowseUrl:'../ckfinder/ckfinder.html',
-        filebrowserImageBrowseUrl:'../ckfinder/ckfinder.html?type=Images',
-        filebrowserFlashBrowseUrl:'../ckfinder/ckfinder.html?type=Flash',
-        filebrowserUploadUrl:'../ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
-        filebrowserImageUrl:'../ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
-        filebrowserFlashUrl:'../ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash',
+        filebrowserBrowseUrl:'./ckfinder/ckfinder.html',
+        filebrowserImageBrowseUrl:'./ckfinder/ckfinder.html?type=Images',
+        filebrowserFlashBrowseUrl:'./ckfinder/ckfinder.html?type=Flash',
+        filebrowserUploadUrl:'./ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+        filebrowserImageUrl:'./ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+        filebrowserFlashUrl:'./ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash',
     });
 }
