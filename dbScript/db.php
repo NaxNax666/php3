@@ -4,7 +4,6 @@
     function db_edit($editor, $page)//функция изменения статьи
     {
         global $db_name,$db_adress,$db_password,$db_login;
-        echo "<script>alert();</script>";
         $mysqli = new mysqli($db_adress, $db_login, $db_password, $db_name);
         $query  = "Update content set text='".$editor."'where id =".$page.";";
         $mysqli->query($query);
@@ -53,7 +52,7 @@
     function delArticle($page)//функция удаления статьи
     {
         global $db_name,$db_adress,$db_password,$db_login;
-        echo "<script>alert();</script>";
+
         $mysqli = new mysqli($db_adress, $db_login, $db_password, $db_name);
         $query  = "Delete from content where id=".$page.";";
         $mysqli->query($query);

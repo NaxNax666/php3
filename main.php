@@ -34,8 +34,8 @@
             <div class = "neomorphism-exit"><a href="authcore/logout.php">Выйти</a></div>
             <?php
             if(strcmp($login, 'admin') == 0 ){
-            echo'<div class = "neomorphism-add"><a href="dbScript/DelAdd.php?page='.$_GET['page'].'&mode=0">Добавить статью</a></div>
-            <div class = "neomorphism-del"><a href="dbScript/DelAdd.php?page='.$_GET['page'].'&mode=1">Удалить статью</a></div>';
+            echo'<div class = "neomorphism-add"><a href="dbScript/DelAdd.php?page='.$_GET['page'].'">Добавить статью</a></div>
+            <div class = "neomorphism-del"><a href="dbScript/Delfile.php?page='.$_GET['page'].'">Удалить статью</a></div>';
             }
             ?>
 
@@ -43,8 +43,7 @@
     </tr>
     <tr>
         <td width="20%" height="600px" valign="top">
-            <!--скрытый элемент формы, передающий серверу номер текущей
-            статьи-->
+
             <?php
             createMenu();
             ?>

@@ -1,7 +1,5 @@
 <?php
 include ("db.php");
-switch ($_GET['mode']) {
-    case 0:
         ?>
         <html>
         <head>
@@ -25,10 +23,5 @@ switch ($_GET['mode']) {
         <?php if(isset($_POST['create'])){
             createArticle($_POST['title']);
     }
-        break;
-    case 1:
-        delArticle($_GET['page']);
-        break;
-}
 
 ?>

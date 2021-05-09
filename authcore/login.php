@@ -19,6 +19,11 @@ if (isset($_POST['add'])) {
     $login = isset($_POST['login']) ?$_POST['login']: '';
     $password = isset($_POST['password']) ?$_POST['login']: '';
     signup($login,$password);
+    if (checkAuth($login, $password)) {
+        setcookie('login', $login, 0, '/');
+        setcookie('password', $password, 0, '/');
+        header('Location: ../main.php');
+    }
     //header('Location: ../authcore/login.php');
 }
 if (isset($_COOKIE['login'])) {
