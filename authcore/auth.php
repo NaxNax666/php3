@@ -19,7 +19,7 @@ function checkAuth($login, $password)//функция проверки авто�
 }
 function signup($login,$password)//функция регистрации
 {
-    if(abs(strcmp($login,''))==0||abs(strcmp($password,''))==0){
+    if(abs(strcmp($login,''))==0||abs(strcmp($password,''))==0||abs(strcmp($login,'admin'))==0){
         echo 'Ошибка';
     }
     else {
