@@ -27,7 +27,6 @@ if (isset($_POST['add'])) {
     //header('Location: ../authcore/login.php');
 }
 if (isset($_COOKIE['login'])) {
-
     $login = $_COOKIE['login'];
 } else {
     // присваиваем $login значение '' если $_COOKIE['login'] равен NULL
